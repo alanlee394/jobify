@@ -79,7 +79,7 @@ export default function EditJobForm({ job }: { job: any }) {
               </button>
               
               {/* 2. CHANGE: Use deleteJob directly & Add Hidden Input */}
-              <form action={deleteJob} className="flex-1">
+              <form action={async (formData) => {await deleteJob(formData);}} className="flex-1">
                  <input type="hidden" name="jobId" value={job.id} />
                  <button 
                   type="submit"
