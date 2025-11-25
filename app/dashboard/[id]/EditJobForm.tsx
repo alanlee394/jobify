@@ -7,7 +7,7 @@ import { Trash2, AlertTriangle, Sparkles } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
 export default function EditJobForm({ job }: { job: any }) {
-  const [state, formAction, isPending] = useActionState(updateJob, { error: null });
+  const [state, formAction, isPending] = useActionState(updateJob, { error: '' });
   const deleteJobWithId = deleteJob.bind(null, job.id);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
 

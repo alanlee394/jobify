@@ -5,7 +5,7 @@ import { useActionState } from "react";
 import Link from "next/link";
 
 export default function NewJobPage() {
-  const [state, formAction, isPending] = useActionState(createJob, { error: null });
+  const [state, formAction, isPending] = useActionState(createJob, { error: '' });
 
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow">

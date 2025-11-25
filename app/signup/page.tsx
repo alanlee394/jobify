@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useActionState } from "react"; 
 
 export default function SignupPage() {
-  const [state, formAction, isPending] = useActionState(signup, { error: null });
+  const [state, formAction, isPending] = useActionState(signup, { error: '' });
 
   return (
     <div className="flex h-screen items-center justify-center bg-gray-50">
