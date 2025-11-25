@@ -147,14 +147,18 @@ export async function updateJob(prevState: any, formData: FormData) {
   redirect("/dashboard");
 }
 // 2. DELETE JOB
-export async function deleteJob(jobId: string) {
+export async function deleteJob(formData: FormData) {
   const session = await auth();
   if (!session?.user?.email) return { error: "Unauthorized" };
+
+  // FIX: Get ID from the form instead of argument
+  const jobId = formData.get("jobId") as string;
 
   try {
     await prisma.job.delete({
       where: { 
         id: jobId,
+        // Ensure the user owns this job before deleting
         userId: (await prisma.user.findUnique({ where: { email: session.user.email } }))?.id 
       },
     });
@@ -167,11 +171,6 @@ export async function deleteJob(jobId: string) {
   redirect("/dashboard");
 }
 
-// ... keep imports (OpenAI, prisma, auth, etc) ...
-
-// ==========================================
-// 1. GLOBAL ADVICE (For /dashboard/coach)
-// ==========================================
 export async function generateGlobalAdvice() {
   const session = await auth();
   if (!session?.user?.email) return { error: "Unauthorized" };
@@ -219,9 +218,6 @@ export async function generateGlobalAdvice() {
   }
 }
 
-// ==========================================
-// 2. SPECIFIC ADVICE (For EditJobForm)
-// ==========================================
 export async function generateJobSpecificAdvice(jobId: string) {
   const session = await auth();
   if (!session?.user?.email) return { error: "Unauthorized" };
