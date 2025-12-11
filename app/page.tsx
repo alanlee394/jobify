@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       
-      {/* --- NAVIGATION --- */}
+      {/* NAVIGATION */}
       <nav className="border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -31,7 +31,7 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* --- HERO SECTION --- */}
+      {/* HERO SECTION */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
           Stop using spreadsheets. <br />
@@ -58,7 +58,7 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* --- SOCIAL PROOF / FEATURES --- */}
+        {/* SOCIAL PROOF / FEATURES */}
         <div className="flex flex-wrap justify-center gap-8 text-gray-600 font-medium mb-16">
           <div className="flex items-center gap-2">
             <CheckCircle className="text-green-500" size={20} /> Organized Pipeline
@@ -71,11 +71,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* --- DASHBOARD PREVIEW IMAGE --- */}
+        {/* DASHBOARD PREVIEW IMAGE */}
         <div className="relative mx-auto max-w-5xl rounded-xl border border-gray-200 shadow-2xl overflow-hidden">
-            {/* NOTE: Make sure you put 'dashboard-preview.png' inside your /public folder! 
-               If you don't have it yet, this will show a broken image icon.
-            */}
             <Image 
               src="/dashboard-preview.png" 
               alt="Jobify Dashboard Preview" 
@@ -87,7 +84,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* --- FOOTER --- */}
+      {/* FOOTER */}
       <footer className="bg-gray-50 border-t border-gray-100 py-12 mt-20">
         <div className="text-center text-gray-400">
           <p>&copy; 2025 Jobify. Built with Next.js</p>
