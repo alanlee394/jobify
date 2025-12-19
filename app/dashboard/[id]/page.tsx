@@ -3,7 +3,6 @@ import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import EditJobForm from "./EditJobForm"; 
 
-// Update the type definition to wrap params in a Promise
 type Props = {
   params: Promise<{ id: string }>;
 };
@@ -11,15 +10,12 @@ type Props = {
 export default async function JobDetailsPage({ params }: Props) {
   const session = await auth();
   
-  // 1. >>> FIX: Await the params before using them <<<
   const { id } = await params; 
 
   if (!session?.user?.email) {
     redirect("/login");
   }
 
-  // 2. >>> FIX: Use findFirst instead of findUnique <<<
-  // This allows us to securely check both ID and User Ownership at the same time
   const job = await prisma.job.findFirst({
     where: { 
       id: id,
