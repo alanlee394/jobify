@@ -1,10 +1,10 @@
 # Jobify - Job Tracker Website
 
-[**🚀 Visit Live Deployment**](https://jobify-j4fl.vercel.app/)
+[** Click Me to Visit Live Deployment**](https://jobify-j4fl.vercel.app/)
 
 A modern job search management tool built with **Next.js** and **Prisma** that helps you organize your applications, track interviews, and get AI-powered career advice.
 
-## 🎯 Features
+## Features
 
 - **Kanban Board Dashboard**: Organize jobs by status (Applied, Interview, Offer, Rejected)
 - **Job Tracking**: Track company, position, status, and notes for each application
@@ -13,7 +13,7 @@ A modern job search management tool built with **Next.js** and **Prisma** that h
 - **PostgreSQL Database**: Reliable data persistence with Prisma ORM
 - **Responsive Design**: Built with Tailwind CSS for mobile and desktop
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: Next.js 16, React 19, TypeScript
 - **Styling**: Tailwind CSS 4, PostCSS
@@ -23,13 +23,13 @@ A modern job search management tool built with **Next.js** and **Prisma** that h
 - **AI Integration**: OpenAI API
 - **Security**: bcryptjs for password hashing
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js (v18+)
 - PostgreSQL database
 - OpenAI API key (for AI features)
 
-## 🚀 Getting Started - How to Run Locally
+## Getting Started - How to Run Locally
 
 ### 1. Clone & Install
 
@@ -73,7 +73,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 jobify/
@@ -96,7 +96,7 @@ jobify/
 └── public/              # Static assets
 ```
 
-## 🔑 Key Components
+## Key Components
 
 ### Authentication
 
@@ -118,7 +118,7 @@ jobify/
 - `generateGlobalAdvice()`: AI analysis of entire job search
 - `generateJobSpecificAdvice()`: AI tips for specific role
 
-## 🤖 AI Features
+## AI Features
 
 ### Career Coach
 
@@ -136,14 +136,14 @@ For each job, receive:
 - Resume keywords
 - Tactical tips to stand out
 
-## 🔐 Security Notes
+## Security Notes
 
 - Passwords are hashed with bcryptjs
 - User ownership is verified on all job operations
 - Authentication required for dashboard and actions
 - Environment variables for sensitive keys
 
-## 🐳 Docker Setup
+## Docker Setup
 
 The project includes Docker Compose for PostgreSQL:
 
@@ -152,7 +152,7 @@ docker-compose up -d      # Start database
 docker-compose down       # Stop database
 ```
 
-## 🚀 Deployment
+## Deployment
 
 This project is ready for deployment on Vercel:
 
@@ -161,13 +161,10 @@ This project is ready for deployment on Vercel:
 3. Set environment variables in Vercel dashboard
 4. Deploy
 
-## 📝 License
+## License
 
 MIT License - feel free to use this project for personal or commercial purposes.
 
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to submit issues and pull requests.
 
 ---
 
