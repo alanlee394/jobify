@@ -1,6 +1,6 @@
 # Jobify - Job Tracker Website
 
-[** Click Me to Visit Live Deployment**](https://jobify-j4fl.vercel.app/)
+[**Click Me to Visit Live Deployment**](https://jobify-j4fl.vercel.app/)
 
 A modern job search management tool built with **Next.js** and **Prisma** that helps you organize your applications, track interviews, and get AI-powered career advice.
 
